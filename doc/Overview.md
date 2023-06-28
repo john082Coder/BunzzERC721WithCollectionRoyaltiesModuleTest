@@ -22,7 +22,7 @@ This module is useful for creating ERC721 tokens with customizable royalty setti
 - github repo URL
     https://github.com/john082Coder/BunzzERC721WithCollectionRoyaltiesModuleTest
 - simple dapp URL
-    https://bunzz-erc-721-custom-uri-mintable-module-test.vercel.app/
+    https://bunzz-erc-721-with-collection-royalties-module-test.vercel.app/
 
 
 ---
