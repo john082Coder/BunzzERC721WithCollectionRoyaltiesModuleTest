@@ -1,11 +1,11 @@
 ## Preparation before deployment
 
 ## Get started(Operation)
-1. Deploy the contract by providing a name, symbol, and base token URI for the ERC721 token.
-2. Assign the MINTER_ROLE to the desired addresses using the _setupRole function.
-3. Mint new tokens by calling the mint function with the recipient's address and token ID.
-4. Set the token URI for a specific token by calling the _setTokenURI function with the token ID and desired URI.
-5. Query token URIs by calling the tokenURI function with the token ID.
+1. Deploy the ERC721WithCollectionRoyalties contract by providing the name and symbol of your ERC721 token collection.
+2. Call the 'mintWithRoyalty' function to mint a new token, specifying the recipient's address, token ID, token URI, royalty recipient, and royalty rate.
+3. Use the 'getRoyalty' function to retrieve the royalty information (recipient and rate) for a specific token by providing its token ID.
+4. When necessary, override the '_burn' and 'tokenURI' functions to ensure compatibility with the ERC721URIStorage contract.
+5. Interact with the contract as you would with a standard ERC721 contract, using the provided functions for managing and transferring tokens.
 
 
 

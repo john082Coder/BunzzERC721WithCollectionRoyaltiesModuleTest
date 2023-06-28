@@ -1,1 +1,1 @@
-mint, tokenURI
+mintWithRoyalty, getRoyalty, royaltyRate, royaltyRecipient

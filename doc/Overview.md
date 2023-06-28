@@ -1,22 +1,26 @@
 ## About
 > one line description ← What issue does this module solve?
 
- ERC721MintRole module is a standard interface for non-fungible tokens, also known as deeds. This contract extends the ERC721Enumerable and AccessControl contracts from OpenZeppelin to create a custom ERC721 token with minting functionality.
+ The ERC721WithCollectionRoyalties contract is an extension of the ERC721 and ERC721URIStorage contracts from OpenZeppelin.
+
+It allows users to create non-fungible tokens (NFTs) with customizable royalty settings for each token.
 
 
 ## Features
 
-The contract allows users with the MINTER_ROLE to mint new tokens and set token URIs.
+The contract stores royalty information in a mapping, with the option to set a recipient and a royalty rate during the minting process.
 
-The contract also supports querying token URIs and provides a base URI for token metadata.
+The royalty rate is represented as a percentage with two decimal places.
+
+The contract also provides a function to retrieve the royalty information for a specific token.
 
 ## Use case
 
-ERC721MintRole tokens are perfect for physical assets such as land, real estate, art trading, loan financing and other financial products, agricultural land management, identification, data storing and so on.
+This module is useful for creating ERC721 tokens with customizable royalty settings.
 
 ## Sample dApp
 - github repo URL
-    https://github.com/john082Coder/BunzzERC721CustomURIMintableModuleTest
+    https://github.com/john082Coder/BunzzERC721WithCollectionRoyaltiesModuleTest
 - simple dapp URL
     https://bunzz-erc-721-custom-uri-mintable-module-test.vercel.app/
 
