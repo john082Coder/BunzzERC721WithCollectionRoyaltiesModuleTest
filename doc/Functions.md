@@ -48,47 +48,21 @@ Sets or unsets the approval of a given operator An operator is allowed to transf
 |approved|bool|Approval status|
 
 
-## mint
-Can only be called by the contract owner. Needs to provide the address that will receive the NFT. Needs to provide a token ID for metadata
+## mintWithRoyalty
+Can only be called by the contract owner to mint nft with customizable royalty settings.
+Need to provide address to mint,  token id, token uri, royalty recipient address and royalty rate.
 
 |Name|Type|Description|
 |--- |---|---|
 |to|address|The tokens receiver|
 |_tokenId|uint256|New token id that will be minted|
+|tokenURI|string|The token URI string|
+|royaltyRecipient|address|Recipient address for royalty|
+|royaltyRate|uint256|The royalty rate. Stored as a percentage with two decimal places, so 10000 means 100.00%|
 
-## revokeRole
-Revokes role from account
-
-|Name|Type|Description|
-|--- |---|---|
-|role|bytes32|The role id|
-|account|address|The account that will be rovoked from role|
-
-## renounceRole
-Renounce role from account
-
-|Name|Type|Description|
-|--- |---|---|
-|role|bytes32|The role id|
-|account|address|The account that will renounce the role|
-
-## grantRole
-Grants a role to account
-
-|Name|Type|Description|
-|--- |---|---|
-|role|bytes32|The role id|
-|account|address|The account that will be granted the role|
 
 
 # READ(main)
-
-
-## totalSupply
-Returns the amount of tokens in existence
-
-No arguments
-
 
 ## supportsInterface
 Returns a boolean that tells us if the contract supports royalties
@@ -129,21 +103,6 @@ Returns the uri of the metadata
 |--- |---|---|
 |tokenId|uint256|The id of the token|
 
-## tokenOfOwnerByIndex
-Returns all the tokens owned by an address and given index
-
-|Name|Type|Description|
-|--- |---|---|
-|owner|address|The token owner|
-|index|uint256|The index of the token|
-
-## tokenByIndex
-Return the token index based on user balance
-
-|Name|Type|Description|
-|--- |---|---|
-|index|uint256|The index of the token|
-
 
 ## getApproved
 Gets the approved address for a token ID, or zero if no address set Reverts if the token ID does not exist.
@@ -160,27 +119,9 @@ Tells whether an operator is approved by a given owner.
 |owner|address|The address of the tokens owner|
 |operator|uint256|The account that will get the rights to operate over owner balance|
 
-## hasRole
-Returns true if account has been granted role
+## royalties
+Mapping variable for storing royalty
 
 |Name|Type|Description|
 |--- |---|---|
-|role|bytes32|The role id|
-|account|address|The account that will be granted the role|
-
-## getRoleAdmin
-Returns the admin role that controls roles
-
-|Name|Type|Description|
-|--- |---|---|
-|role|bytes32|The role id|
-
-## MINTER_ROLE
-The role for minters
-
-No arguments
-
-## DEFAULT_ADMIN_ROLE
-The starting admin for all roles
-
-No arguments
+|tokenId|uint256|The token id you will retrieves the royalty|
