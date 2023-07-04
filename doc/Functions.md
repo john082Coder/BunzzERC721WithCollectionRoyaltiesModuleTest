@@ -1,24 +1,24 @@
 # WRITE(main)
 
 ## transferFrom
-Transfer a particular tokenId from the token owner to an certai address if the caller have the permision to transfer it
+Transfer a particular tokenId from the token owner to an certai address if the caller have the permission to transfer it
 
-|Name|Type|Description|Example|Default|
-|--- |---|---|---|---|
-|from|address|The token sender||N/A|
-|to|address|The token receiver||N/A|
-|tokenId|uint256|The id of the token that will be transfered||N/A|
+|Name|Type|Description|
+|--- |---|---|
+|from|address|The address of token sender|
+|to|address|The address of token receiver|
+|tokenId|uint256|The id of the token that will be transfered|
 
 
 ## safeTransferFrom
 Safely transfers the ownership of a given token ID
 
-|Name|Type|Description|Example|Default|
-|--- |---|---|---|---|
-|from|address|The token sender||N/A|
-|to|address|The token receiver||N/A|
-|tokenId|uint256|The id of the token that will be sent||N/A|
-|_data|bytes|Optional data field||N/A|
+|Name|Type|Description|
+|--- |---|---|
+|from|address|The address of token sender|
+|to|address|The address of token receiver|
+|tokenId|uint256|The id of the token that will be sent|
+|_data|bytes|Optional data field|
 
 ## safeTransferFrom
 Safely transfers the ownership of a given token ID
@@ -30,7 +30,7 @@ Safely transfers the ownership of a given token ID
 |tokenId|uint256|The id of the token that will be sents|
 
 ## approve
-Gives an certain address permision to move tokens for the token owner
+Gives an certain address permission to move tokens for the token owner
 
 |Name|Type|Description|
 |--- |---|---|
